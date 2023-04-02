@@ -44,22 +44,13 @@
   font-size: 17px !important;
 }
 
-.toggle:focus ~ .list {
-  height: 27% !important;
-  width: 80% !important;
-  left: 12% !important;
-}
-.toggle2:focus ~ .list2 {
-  height: 35% !important;
-  width: 80% !important;
-  left: 12% !important;
-}
-.toggle3:focus ~ .list3 {
-  height: 40% !important;
-  width: 80% !important;
-  left: 12% !important;
+.card__read-more{
+  transform: scale(0.6);
 }
 
+.footerbottom {
+  font-size: 20px;
+}
         .main-text {
           position: relative;
           transform: scale(0.7);
@@ -991,225 +982,146 @@ html {
         font-weight: 300;
       }
 
-      .section-title.center .line {
-        border-top: 4px solid aqua;
-        height: 10px;
-        width: 80px;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 20px;
-      }
+      .section-title.center .line{
+    background-color: aqua;
+    height: 4px;
+    width: 120px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
       .containerdd {
   justify-content: center;
 position: relative;
 padding-bottom: 80px;
 }
-
-.toggle {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
+.bubbly-button {
+  width: 220%;
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #131313;
+  color: #fff;
+  border-radius: 15px;
+  border: solid 2px aqua;
   cursor: pointer;
+  position: relative;
+  right:60%;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(0, 255, 255, 0.5);
 }
-
-.toggle::after {
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
   content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 20%, #00FFFF 20%, transparent 30%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 1s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 1s forwards;
 }
 
-.list {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:22%;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
 }
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+.card{
+  width: 20rem;
+  color: #fff;
+  margin: 2rem auto;
+  border-radius: 15px;
+}
+
+.card__name{
+  font-size: 1.7em;
+}
+
+.card__img{
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.card-contents{
+  padding: 1rem;
+  width: 100%;
+}
+
+
+
+.card__read-more{
+  display: block;
   opacity: 0;
-  transition: all 0.7s !important;
-  padding-left: 14px !important;
-  padding-right: 14px !important;
+  max-height: 0;
+  width: 80rem;
+  position: relative;
+right:170%;
+  top:10px;
+  background-color: #131313;
+  border-radius: 15px;
+  transition: all 0.8s;
 }
 
-.toggle:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle:focus ~ .list {
-  height: 30%;
-}
-
-.toggle:focus ~ .list .list-item {
-  opacity: 100;
-}
-
-.toggle2 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
+.card__read-more--open{
+  padding: 1em 2em;
+  display: block;
+  opacity: 1;
+  max-height: 100rem;
   box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle2::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list2 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:22%;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle2:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle2:focus ~ .list2 {
-  height: 35%;
-}
-
-.toggle2:focus ~ .list2 .list-item {
-  opacity: 100;
-}
-
-.toggle3 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle3::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list3 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:22%;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 0% !important;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle3:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle3:focus ~ .list3 {
-  height: 42%;
-}
-
-.toggle3:focus ~ .list3 .list-item {
-  opacity: 100;
+  border: 1px solid aqua;
 }
     </style>
   </head>
@@ -1263,30 +1175,77 @@ padding-bottom: 80px;
               <body translate="no">
   <div class="containerdd">
   <div class="menu">
-    <button class="toggle">What is a computer?</button>
-    <div class="list">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s">A computer is a technological device used for doing calculations that humans might not be able to do sometimes. For the most part, a computer can be on for a very long time while you can only be awake for a few hours.</p>    
+
+<div class="card-holder">
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">What's a computer?</button>
+          <span style="text-align: center;" class="card__read-more">A computer is an electronic device that uses programs to perform tasks. It can process and store data, and communicate with other devices. Computers are used in many fields, like education, entertainment, healthcare, and business.</span>
+        
+      </div>
     </div>
-    <br>
-    <button class="toggle2">What is the internet?</button>
-    <div class="list2">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s">The internet is most commonly used for communication between people. However, the internet has many purposes! For example, you can host very important files over the internet, available for you at all times! Another important thing to not about the internet, is it connects devices together, like a spider web!</p>        
+
+<div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">What's the internet?</button>
+          <span style="text-align: center;" class="card__read-more">The internet is a global network of interconnected computers and devices. It allows people all over the world to communicate and share information. The internet is used for many purposes, such as research, entertainment, and commerce.</span>
+        
+      </div>
     </div>
-    <br>
-    <button class="toggle3">Am I safe on the internet?</button>
-    <div class="list3">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s">There will always be people with malicious intent wherever you go. You won't be able to change someone else, but you are able to change how much information on you is out there. Your data is very important to you, why not keep it protected? Here at OpenEyes, we understand how much you value your data, and we want to help keep it protected! You can learn more about VPN's at our Tools and Resources page.</p>     
+
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Is the internet safe?</button>
+          <span style="text-align: center;" class="card__read-more">In today's online environment, protecting your sensitive information is crucial. OpenEyes understands the importance of safeguarding your data, and we offer solutions to help you stay secure. We invite you to explore our <a href="resources.html">Tools and Resources</a> page to learn more about VPNs and how they can help you stay secure.</span>
+        
+      </div>
     </div>
+
+    <script type="text/javascript">window.HUB_EVENTS={ASSET_ADDED:"ASSET_ADDED",ASSET_DELETED:"ASSET_DELETED",ASSET_DESELECTED:"ASSET_DESELECTED",ASSET_SELECTED:"ASSET_SELECTED",ASSET_UPDATED:"ASSET_UPDATED",CONSOLE_CHANGE:"CONSOLE_CHANGE",CONSOLE_CLOSED:"CONSOLE_CLOSED",CONSOLE_EVENT:"CONSOLE_EVENT",CONSOLE_OPENED:"CONSOLE_OPENED",CONSOLE_RUN_COMMAND:"CONSOLE_RUN_COMMAND",CONSOLE_SERVER_CHANGE:"CONSOLE_SERVER_CHANGE",EMBED_ACTIVE_PEN_CHANGE:"EMBED_ACTIVE_PEN_CHANGE",EMBED_ACTIVE_THEME_CHANGE:"EMBED_ACTIVE_THEME_CHANGE",EMBED_ATTRIBUTE_CHANGE:"EMBED_ATTRIBUTE_CHANGE",EMBED_RESHOWN:"EMBED_RESHOWN",FORMAT_FINISH:"FORMAT_FINISH",FORMAT_ERROR:"FORMAT_ERROR",FORMAT_START:"FORMAT_START",IFRAME_PREVIEW_RELOAD_CSS:"IFRAME_PREVIEW_RELOAD_CSS",IFRAME_PREVIEW_URL_CHANGE:"IFRAME_PREVIEW_URL_CHANGE",KEY_PRESS:"KEY_PRESS",LINTER_FINISH:"LINTER_FINISH",LINTER_START:"LINTER_START",PEN_CHANGE_SERVER:"PEN_CHANGE_SERVER",PEN_CHANGE:"PEN_CHANGE",PEN_EDITOR_CLOSE:"PEN_EDITOR_CLOSE",PEN_EDITOR_CODE_FOLD:"PEN_EDITOR_CODE_FOLD",PEN_EDITOR_ERRORS:"PEN_EDITOR_ERRORS",PEN_EDITOR_EXPAND:"PEN_EDITOR_EXPAND",PEN_EDITOR_FOLD_ALL:"PEN_EDITOR_FOLD_ALL",PEN_EDITOR_LOADED:"PEN_EDITOR_LOADED",PEN_EDITOR_REFRESH_REQUEST:"PEN_EDITOR_REFRESH_REQUEST",PEN_EDITOR_RESET_SIZES:"PEN_EDITOR_RESET_SIZES",PEN_EDITOR_SIZES_CHANGE:"PEN_EDITOR_SIZES_CHANGE",PEN_EDITOR_UI_CHANGE_SERVER:"PEN_EDITOR_UI_CHANGE_SERVER",PEN_EDITOR_UI_CHANGE:"PEN_EDITOR_UI_CHANGE",PEN_EDITOR_UI_DISABLE:"PEN_EDITOR_UI_DISABLE",PEN_EDITOR_UI_ENABLE:"PEN_EDITOR_UI_ENABLE",PEN_EDITOR_UNFOLD_ALL:"PEN_EDITOR_UNFOLD_ALL",PEN_ERROR_INFINITE_LOOP:"PEN_ERROR_INFINITE_LOOP",PEN_ERROR_RUNTIME:"PEN_ERROR_RUNTIME",PEN_ERRORS:"PEN_ERRORS",PEN_LIVE_CHANGE:"PEN_LIVE_CHANGE",PEN_LOGS:"PEN_LOGS",PEN_MANIFEST_CHANGE:"PEN_MANIFEST_CHANGE",PEN_MANIFEST_FULL:"PEN_MANIFEST_FULL",PEN_PREVIEW_FINISH:"PEN_PREVIEW_FINISH",PEN_PREVIEW_START:"PEN_PREVIEW_START",PEN_SAVED:"PEN_SAVED",POPUP_CLOSE:"POPUP_CLOSE",POPUP_OPEN:"POPUP_OPEN",POST_CHANGE:"POST_CHANGE",POST_SAVED:"POST_SAVED",PROCESSING_FINISH:"PROCESSING_FINISH",PROCESSING_START:"PROCESSED_STARTED"},"object"!=typeof window.CP&&(window.CP={}),window.CP.PenTimer={programNoLongerBeingMonitored:!1,timeOfFirstCallToShouldStopLoop:0,_loopExits:{},_loopTimers:{},START_MONITORING_AFTER:2e3,STOP_ALL_MONITORING_TIMEOUT:5e3,MAX_TIME_IN_LOOP_WO_EXIT:2200,exitedLoop:function(E){this._loopExits[E]=!0},shouldStopLoop:function(E){if(this.programKilledSoStopMonitoring)return!0;if(this.programNoLongerBeingMonitored)return!1;if(this._loopExits[E])return!1;var _=this._getTime();if(0===this.timeOfFirstCallToShouldStopLoop)return this.timeOfFirstCallToShouldStopLoop=_,!1;var o=_-this.timeOfFirstCallToShouldStopLoop;if(o<this.START_MONITORING_AFTER)return!1;if(o>this.STOP_ALL_MONITORING_TIMEOUT)return this.programNoLongerBeingMonitored=!0,!1;try{this._checkOnInfiniteLoop(E,_)}catch{return this._sendErrorMessageToEditor(),this.programKilledSoStopMonitoring=!0,!0}return!1},_sendErrorMessageToEditor:function(){try{if(this._shouldPostMessage()){var E={topic:HUB_EVENTS.PEN_ERROR_INFINITE_LOOP,data:{line:this._findAroundLineNumber()}};parent.postMessage(E,"*")}else this._throwAnErrorToStopPen()}catch{this._throwAnErrorToStopPen()}},_shouldPostMessage:function(){return document.location.href.match(/boomboom/)},_throwAnErrorToStopPen:function(){throw""},_findAroundLineNumber:function(){var E=new Error("ignored"),_=0;if(E.stack){var o=E.stack.match(/boomboom\S+:(\d+):\d+/);o&&(_=o[1])}return _},_checkOnInfiniteLoop:function(E,_){if(!this._loopTimers[E])return this._loopTimers[E]=_,!1;if(_-this._loopTimers[E]>this.MAX_TIME_IN_LOOP_WO_EXIT)throw""+E},_getTime:function(){return Date.now()}},window.CP.shouldStopExecution=function(E){var _=window.CP.PenTimer.shouldStopLoop(E);return!0===_&&console.warn(""),_},window.CP.exitedLoop=function(E){window.CP.PenTimer.exitedLoop(E)};</script>
+
+    <script id="rendered-js">
+var animateButton = function (e) {
+  e.preventDefault;
+  e.target.classList.remove('animate');
+  e.target.classList.add('animate');
+  setTimeout(function () {
+    e.target.classList.remove('animate');
+  }, 700);
+};
+
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+for (var i = 0; i < bubblyButtons.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+  bubblyButtons[i].addEventListener('click', animateButton, false);
+}window.CP.exitedLoop(0);
+
+    </script>
+
+  
+
+
+
+<script>const btn = document
+    .querySelector('.bubbly-button');
+const text = document
+    .querySelector('.card__read-more');
+const cardHolder = document
+    .querySelector('.card-holder');
+cardHolder
+    .addEventListener('click', e => {
+        const current = e.target;
+        const isReadMoreBtn = current.className.includes('bubbly-button');
+        if (!isReadMoreBtn)
+            return;
+        const currentText = e.target.parentNode.querySelector('.card__read-more');
+        currentText.classList.toggle('card__read-more--open');
+    });</script>
+
   </div>
 </div>
-
-<p class="blockquote"><strong>Awesome!</strong><br>
+<p style="position: relative; top: 20px;" class="blockquote"><strong>Awesome!</strong><br>
               Now you have a better understand of the technology you see everyday!<br>Want to dive in deeper? We have a variety of tools and resources you can use!<br><br>Click the button below to learn more!<br><br></p>
-            <a href="resources.html" class="joinbutton">Tools and Resources</a>
-            <br>
+            <a style="position: relative; top: 20px;" href="resources.html" class="joinbutton">Tools and Resources</a>
+            
             <h2 style="padding-top: 120px; padding-bottom: 10px;">
             <strong style="font-size:1.5em">Need a repair?</strong><br>
             <p>Schedule a visit with us now!</p>
@@ -1297,11 +1256,13 @@ padding-bottom: 80px;
         </div>
       </div>
     </div>
-    <div id="contact" class="text-center">
-      <div style="padding-top:10px;background-color: #1D1D1D; border-color: white; border-radius: 5px; border-style: solid; border-width: 3px;" class="container">
+<div id="contact" class="container text-center">
+    <div style="background-color: #1D1D1D; border-color: grey; border-radius: 30px; border-style: solid; border-width: 3px;" class="container">
         <div class="section-title center">
-          <h2><strong style="font-size:1.65em">Subscribe</strong></h2>
-          <div class="line"></div>
+            <h2>Subscribe</h2>
+            <div class="line">
+
+            </div>
         </div>
         <div class="address">Receive all our news and updates</div>
         <div style="font-style: italic; font-size:0.5em; padding-top: 15px">Fields marked with an asterisk (*) are required</div>
@@ -1313,31 +1274,32 @@ padding-bottom: 80px;
             <input name="email" type="text" id="email" placeholder="Email *" required>
             <input name="email" type="text" id="email" placeholder="Address (optional)">
             <input type="submit" class="send_message transition" id="submit" value="Subscribe Now!">
-          </form>
+            </form>
         </div>
-      </div>
+
+
     </div>
+
+
+</div>
+  </body>
+</div>
     <footer style="margin-top: 80px" id="footer">
-      <div class="footer-top">
+    <div class="footer-top">
         <div class="container text-center">
-          <div class="footer-logo">
-            <a style="font-size:200%; flex-wrap: nowrap;">OpenEyes - 2023 FBLA Regionals</a>
-          </div>
+            <div class="footer-logo">
+                <a style="font-size:200%; flex-wrap: nowrap;">OpenEyes - 2023 FBLA State</a>
+            </div>
+            
         </div>
-      </div>
-      <div class="footer-bottom">
+    </div>
+    <div class="footer-bottom">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <p class="footertext">© 2023 Jagger</p>
-            </div>
-            <div class="col-sm-6">
-              <p class="pull-right footertext">Developed by <a class="footertext" href="https://www.instagram.com/zvrcx">Jagger</a> and <a class="footertext" href="https://www.instagram.com/dreamwastee">Marci</a>
-              </p>
-            </div>
-          </div>
+                <div>
+                    <p class="footerbottom" style="text-align: center; position: relative; bottom: 20px">Developed by <a style="color: aqua">Jagger</a> and <a style="color: aqua" >Kenneth</a></p>
+                </div>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
   </body>
 </html>

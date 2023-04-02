@@ -40,34 +40,14 @@
         .container {
           padding: 20px;
         }
+        .footerbottom {
+  font-size: 20px;
+}
 .list-item {
   font-size: 17px !important;
 }
-
-.toggle:focus ~ .list {
-  height: 40% !important;
-  width: 90% !important;
-  left: 10% !important;
-}
-.toggle2:focus ~ .list2 {
-  height: 35% !important;
-  width: 93% !important;
-  left: 5% !important;
-}
-.toggle3:focus ~ .list3 {
-  height: 45% !important;
-  width: 93% !important;
-  left: 5% !important;
-}
-.toggle4:focus ~ .list4 {
-  height: 50% !important;
-  width: 93% !important;
-  left: 5% !important;
-}
-.toggle5:focus ~ .list5 {
-  height: 50% !important;
-  width: 93% !important;
-  left: 5% !important;
+.card__read-more{
+  transform: scale(0.6);
 }
         .main-text {
           position: relative;
@@ -998,631 +978,149 @@ html {
         font-weight: 300;
       }
 
-      .section-title.center .line {
-        border-top: 4px solid aqua;
-        height: 10px;
-        width: 80px;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 20px;
-      }
+      .section-title.center .line{
+    background-color: aqua;
+    height: 4px;
+    width: 120px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
       .containerdd {
   justify-content: center;
 position: relative;
 padding-bottom: 80px;
 }
 
-
-.toggle {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
+.bubbly-button {
+  width: 220%;
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #131313;
+  color: #fff;
+  border-radius: 15px;
+  border: solid 2px aqua;
   cursor: pointer;
+  position: relative;
+  right:60%;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(0, 255, 255, 0.5);
 }
-
-.toggle::after {
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
   content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 20%, #00FFFF 20%, transparent 30%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 1s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 1s forwards;
 }
 
-.list {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
 }
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 0% !important;
-  cursor: normal;
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+.card{
+  width: 20rem;
+  color: #fff;
+  margin: 2rem auto;
+  border-radius: 15px;
+}
+
+.card__name{
+  font-size: 1.7em;
+}
+
+.card__img{
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.card-contents{
+  padding: 1rem;
+  width: 100%;
+}
+
+
+
+.card__read-more{
+  display: block;
   opacity: 0;
-  transition: all 0.7s !important;
-  padding-left: 14px !important;
-  padding-right: 14px !important;
+  max-height: 0;
+  width: 80rem;
+  position: relative;
+right:170%;
+  top:10px;
+  background-color: #131313;
+  border-radius: 15px;
+  transition: all 0.8s;
+  z-index: -1;
 }
 
-.toggle:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle:focus ~ .list {
-  height: 42%;
-}
-
-.toggle:focus ~ .list .list-item {
-  opacity: 100;
-}
-
-.toggle2 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
+.card__read-more--open{
+  padding: 1em 2em;
+  z-index: 1;
+  display: block;
+  opacity: 1;
+  max-height: 100rem;
   box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle2::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list2 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle2:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle2:focus ~ .list2 {
-  height: 38%;
-}
-
-.toggle2:focus ~ .list2 .list-item {
-  opacity: 100;
-}
-
-.toggle3 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle3::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list3 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle3:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle3:focus ~ .list3 {
-  height: 40%;
-}
-
-.toggle3:focus ~ .list3 .list-item {
-  opacity: 100;
-}
-
-.toggle4 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle4::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list4 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle4:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle4:focus ~ .list4 {
-  height: 45%;
-}
-
-.toggle4:focus ~ .list4 .list-item {
-  opacity: 100;
-}
-.toggle5 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle5::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list5 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle5:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle5:focus ~ .list5 {
-  height: 45%;
-}
-
-.toggle5:focus ~ .list5 .list-item {
-  opacity: 100;
-}
-.toggle6 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle6::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list6 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle6:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle6:focus ~ .list6 {
-  height: 45%;
-}
-
-.toggle6:focus ~ .list6 .list-item {
-  opacity: 100;
-}
-.toggle7 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle7::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list7 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle7:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle7:focus ~ .list7 {
-  height: 45%;
-}
-
-.toggle7:focus ~ .list7 .list-item {
-  opacity: 100;
-}
-
-.toggle8 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle8::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list8 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle8:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle8:focus ~ .list8 {
-  height: 45%;
-}
-
-.toggle8:focus ~ .list8 .list-item {
-  opacity: 100;
-}
-
-.toggle9 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.toggle9::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.list9 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:21% !important;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
-
-.toggle9:focus::after {
-  transform: rotate(225deg);
-}
-
-.toggle9:focus ~ .list9 {
-  height: 45%;
-}
-
-.toggle9:focus ~ .list9 .list-item {
-  opacity: 100;
+  border: 1px solid aqua;
 }
     </style>
   </head>
@@ -1672,93 +1170,121 @@ padding-bottom: 80px;
             <p class="blockquote">Our team has gathered together a list of useful tools and software for your daily use!<br>
               <br></p>
               <body translate="no">
-  <div class="sec1">
-<button id="OSINT" class="toggle">Digital Breadcrumbs (OSINT)</button>
-    <div class="list">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://osintframework.com" target="_blank">OSINTFramework</a>, <a href="https://www.osinttechniques.com/" target="_blank">OSINTTechniques</a><br>Digital Breadcrumbs is the term for "traces that people leave behind on the internet". These are primarily used for doing background checks on people. Most likely, this is what people will use if they are in the position to hire someone. However, you can also use OSINT to see your own traces floating around on the internet.</p>        
+  <div class="card-holder">
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Link Shorteners</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://v.ht" target="_blank">V.HT</a>, <a href="https://tinyurl.com" target="_blank">TinyURL</a>, <a href="https://bit.ly" target="_blank">Bit.ly</a>, <a href="https://u.nu" target="_blank">u.nu</a><br>Ever wanted to share a website with a friend? Or maybe you need to share a link to your team to collaborate on a document. Yeah, we've been there. We know the pain of having ridiculously long links. You can use one of these to help shorten the link!</span>
+        
+      </div>
     </div>
 
-<br>
-
-<button class="toggle2">Link Shorteners</button>
-    <div class="list2">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://v.ht" target="_blank">V.HT</a>, <a href="https://tinyurl.com" target="_blank">TinyURL</a>, <a href="https://bit.ly" target="_blank">Bit.ly</a>, <a href="https://u.nu" target="_blank">u.nu</a><br>Ever wanted to share a website with a friend? Or maybe you need to share a link to your team to collaborate on a document. Yeah, we've been there. We know the pain of having ridiculously long links. You can use one of these to help shorten the link!</p>        
+<div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Keyboard Shortcuts</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://www.windowscentral.com/best-windows-10-keyboard-shortcuts" target="_blank">Windows Shortcuts</a>, <a href="https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop" target="_blank">Chrome Shortcuts</a><br>Want to improve your productivity speed? Keyboard shortcuts will do the trick! Instead of taking the time to move and aim your mouse, you can just press some keys! It may not sound like a lot, but shortcuts drastically improve your speed!</span>
+        
+      </div>
     </div>
 
-<br>
-
-    <button class="toggle3">Keyboard Shortcuts</button>
-    <div class="list3">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://www.windowscentral.com/best-windows-10-keyboard-shortcuts" target="_blank">Windows Shortcuts</a>, <a href="https://support.google.com/chrome/answer/157179?hl=en&co=GENIE.Platform%3DDesktop" target="_blank">Browser Shortcuts</a><br>Want to improve your productivity speed? Keyboard shortcuts will do the trick! Instead of taking the time to move and aim your mouse, you can just press some keys! It may not sound like a lot, but shortcuts drastically improve your speed!</p>        
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Database Breaches</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://haveibeenpwned.com/" target="_blank">HaveIBeenPwned</a>, <a href="https://haveibeenpwned.com/Passwords" target="_blank">Passwords</a>, <a href="https://www.dehashed.com/" target="_blank">DEHASHED</a><br>Similar to OSINT, people leave more then just breadcrumbs behind. It's common knowledge that "<i style="font-size: 1em">the stronger the password, the more security</i>". However, sometimes they still get leaked. These websites can help you see if any of your Passwords, Emails, Phone Numbers, and more have been leaked online.</span>
+        
+      </div>
     </div>
 
-    <br>
-
-    <button class="toggle4">Password Data Breaches</button>
-    <div class="list4">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://haveibeenpwned.com/" target="_blank">HaveIBeenPwned</a>, <a href="https://haveibeenpwned.com/Passwords" target="_blank">Passwords</a>, <a href="https://www.dehashed.com/" target="_blank">DEHASHED</a><br>Similar to OSINT, people leave more then just breadcrumbs behind. It's common knowledge that "<i style="font-size: 1em">the stronger the password, the more security</i>". However, sometimes they still get leaked. These websites can help you see if any of your Passwords, Emails, Phone Numbers, and more have been leaked online.</p>        
+     <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Website Adblockers</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" target="_blank">UBO (Chrome)</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak" target="_blank">UBO (Edge)</a>, <a href="https://addons.mozilla.org/firefox/addon/ublock-origin/" target="_blank">UBO (Firefox)</a><br>Ads can be annoying, we know. So why keep them? With these extensions for any modern-day browsers, you can remove advertisements! This can help increase your work flow, productivity speed, and also just make your webpages look simple!</span>
+        
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">OSINT/OPSEC</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://osintframework.com" target="_blank">OSINTFramework</a>, <a href="https://www.osinttechniques.com/" target="_blank">OSINTTechniques</a><br>In the digital age, online activity leaves behind a trail of information known as "Digital Breadcrumbs." This term refers to the residual data individuals generate while using the internet. Typically, Digital Breadcrumbs are leveraged to conduct background checks and assess the suitability of job candidates. However, it is also possible to employ Open-Source Intelligence (OSINT) to locate one's own Digital Breadcrumbs on the web.</span>
+        
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Text Hosting</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://www.toptal.com/developers/hastebin/" target="_blank">Hastebin</a>, <a href="https://ghostbin.com/" target="_blank">Ghostbin</a>, <a href="https://stedit.app/" target="_blank">STEdit (editor)</a><br>Whether you need to jot down notes in a hurry or compose a lengthy message for friends, we've got you covered! These powerful programs are here to help make your life easier. With their user-friendly websites, you can easily upload and edit any string of text. Don't hesitate to take advantage of these convenient tools!</span>
+        
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">File Hosting</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://anonfiles.com" target="_blank">AnonFiles</a>, <a href="http://files.htp.sh" target="_blank">HackThePlanet</a>, <a href="https://ufile.io/" target="_blank">ufile</a><br>Need to share a video online? Finished a project that you want to share among your team? These websites can host any file! Simply upload any file into one of the websites above to host it online!</span>
+        
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Anonymity</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://www.torproject.org/download/" target="_blank">TOR</a>, <a href="https://www.security.org/vpn/best/" target="_blank">VPNs</a>, <a href="https://geonode.com/free-proxy-list/" target="_blank">GeoNode</a>, <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>, <a href="https://www.fakenamegenerator.com/" target="_blank">NameGenerator</a>, <a href="https://www.privacytools.io/" target="_blank">PrivacyTools</a><br>We understand how important your personal information is to you, and we're here to help you keep it safe and protected. Our team has curated a selection of the best tools available to ensure that your sensitive data stays secure and doesn't end up in the wrong hands. Don't take any chances when it comes to your privacy and security - let these tools help you safeguard your personal information online!</span>
+        
+      </div>
+    </div>
+     <div class="card">
+      <div class="card-contents">
+        <button class="bubbly-button">Temporary Emails</button>
+          <span style="text-align: center;" class="card__read-more"><a href="https://yopmail.com/en/" target="_blank">YopMail</a>, <a href="https://temp-mail.org/en/" target="_blank">Temp-Mail</a>, <a href="https://mailpoof.com/" target="_blank">Mailproof</a><br>Whether you're concerned about keeping your data safe or simply need a disposable email address for a one-time use, these tools are here to help! With these easy-to-use platforms, you can generate a temporary email address that will keep your personal information secure and protect your privacy online. Don't hesitate to take advantage of these convenient and reliable solutions for all your short-term email needs!</span>
+        
+      </div>
     </div>
 
-    <br>
+    <script type="text/javascript">window.HUB_EVENTS={ASSET_ADDED:"ASSET_ADDED",ASSET_DELETED:"ASSET_DELETED",ASSET_DESELECTED:"ASSET_DESELECTED",ASSET_SELECTED:"ASSET_SELECTED",ASSET_UPDATED:"ASSET_UPDATED",CONSOLE_CHANGE:"CONSOLE_CHANGE",CONSOLE_CLOSED:"CONSOLE_CLOSED",CONSOLE_EVENT:"CONSOLE_EVENT",CONSOLE_OPENED:"CONSOLE_OPENED",CONSOLE_RUN_COMMAND:"CONSOLE_RUN_COMMAND",CONSOLE_SERVER_CHANGE:"CONSOLE_SERVER_CHANGE",EMBED_ACTIVE_PEN_CHANGE:"EMBED_ACTIVE_PEN_CHANGE",EMBED_ACTIVE_THEME_CHANGE:"EMBED_ACTIVE_THEME_CHANGE",EMBED_ATTRIBUTE_CHANGE:"EMBED_ATTRIBUTE_CHANGE",EMBED_RESHOWN:"EMBED_RESHOWN",FORMAT_FINISH:"FORMAT_FINISH",FORMAT_ERROR:"FORMAT_ERROR",FORMAT_START:"FORMAT_START",IFRAME_PREVIEW_RELOAD_CSS:"IFRAME_PREVIEW_RELOAD_CSS",IFRAME_PREVIEW_URL_CHANGE:"IFRAME_PREVIEW_URL_CHANGE",KEY_PRESS:"KEY_PRESS",LINTER_FINISH:"LINTER_FINISH",LINTER_START:"LINTER_START",PEN_CHANGE_SERVER:"PEN_CHANGE_SERVER",PEN_CHANGE:"PEN_CHANGE",PEN_EDITOR_CLOSE:"PEN_EDITOR_CLOSE",PEN_EDITOR_CODE_FOLD:"PEN_EDITOR_CODE_FOLD",PEN_EDITOR_ERRORS:"PEN_EDITOR_ERRORS",PEN_EDITOR_EXPAND:"PEN_EDITOR_EXPAND",PEN_EDITOR_FOLD_ALL:"PEN_EDITOR_FOLD_ALL",PEN_EDITOR_LOADED:"PEN_EDITOR_LOADED",PEN_EDITOR_REFRESH_REQUEST:"PEN_EDITOR_REFRESH_REQUEST",PEN_EDITOR_RESET_SIZES:"PEN_EDITOR_RESET_SIZES",PEN_EDITOR_SIZES_CHANGE:"PEN_EDITOR_SIZES_CHANGE",PEN_EDITOR_UI_CHANGE_SERVER:"PEN_EDITOR_UI_CHANGE_SERVER",PEN_EDITOR_UI_CHANGE:"PEN_EDITOR_UI_CHANGE",PEN_EDITOR_UI_DISABLE:"PEN_EDITOR_UI_DISABLE",PEN_EDITOR_UI_ENABLE:"PEN_EDITOR_UI_ENABLE",PEN_EDITOR_UNFOLD_ALL:"PEN_EDITOR_UNFOLD_ALL",PEN_ERROR_INFINITE_LOOP:"PEN_ERROR_INFINITE_LOOP",PEN_ERROR_RUNTIME:"PEN_ERROR_RUNTIME",PEN_ERRORS:"PEN_ERRORS",PEN_LIVE_CHANGE:"PEN_LIVE_CHANGE",PEN_LOGS:"PEN_LOGS",PEN_MANIFEST_CHANGE:"PEN_MANIFEST_CHANGE",PEN_MANIFEST_FULL:"PEN_MANIFEST_FULL",PEN_PREVIEW_FINISH:"PEN_PREVIEW_FINISH",PEN_PREVIEW_START:"PEN_PREVIEW_START",PEN_SAVED:"PEN_SAVED",POPUP_CLOSE:"POPUP_CLOSE",POPUP_OPEN:"POPUP_OPEN",POST_CHANGE:"POST_CHANGE",POST_SAVED:"POST_SAVED",PROCESSING_FINISH:"PROCESSING_FINISH",PROCESSING_START:"PROCESSED_STARTED"},"object"!=typeof window.CP&&(window.CP={}),window.CP.PenTimer={programNoLongerBeingMonitored:!1,timeOfFirstCallToShouldStopLoop:0,_loopExits:{},_loopTimers:{},START_MONITORING_AFTER:2e3,STOP_ALL_MONITORING_TIMEOUT:5e3,MAX_TIME_IN_LOOP_WO_EXIT:2200,exitedLoop:function(E){this._loopExits[E]=!0},shouldStopLoop:function(E){if(this.programKilledSoStopMonitoring)return!0;if(this.programNoLongerBeingMonitored)return!1;if(this._loopExits[E])return!1;var _=this._getTime();if(0===this.timeOfFirstCallToShouldStopLoop)return this.timeOfFirstCallToShouldStopLoop=_,!1;var o=_-this.timeOfFirstCallToShouldStopLoop;if(o<this.START_MONITORING_AFTER)return!1;if(o>this.STOP_ALL_MONITORING_TIMEOUT)return this.programNoLongerBeingMonitored=!0,!1;try{this._checkOnInfiniteLoop(E,_)}catch{return this._sendErrorMessageToEditor(),this.programKilledSoStopMonitoring=!0,!0}return!1},_sendErrorMessageToEditor:function(){try{if(this._shouldPostMessage()){var E={topic:HUB_EVENTS.PEN_ERROR_INFINITE_LOOP,data:{line:this._findAroundLineNumber()}};parent.postMessage(E,"*")}else this._throwAnErrorToStopPen()}catch{this._throwAnErrorToStopPen()}},_shouldPostMessage:function(){return document.location.href.match(/boomboom/)},_throwAnErrorToStopPen:function(){throw""},_findAroundLineNumber:function(){var E=new Error("ignored"),_=0;if(E.stack){var o=E.stack.match(/boomboom\S+:(\d+):\d+/);o&&(_=o[1])}return _},_checkOnInfiniteLoop:function(E,_){if(!this._loopTimers[E])return this._loopTimers[E]=_,!1;if(_-this._loopTimers[E]>this.MAX_TIME_IN_LOOP_WO_EXIT)throw""+E},_getTime:function(){return Date.now()}},window.CP.shouldStopExecution=function(E){var _=window.CP.PenTimer.shouldStopLoop(E);return!0===_&&console.warn(""),_},window.CP.exitedLoop=function(E){window.CP.PenTimer.exitedLoop(E)};</script>
 
-    <button class="toggle5">Browser Adblockers</button>
-    <div class="list5">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" target="_blank">uBlockOrigin(Chrome)</a>, <a href="https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak" target="_blank">uBlockOrigin(Edge)</a>, <a href="https://addons.mozilla.org/firefox/addon/ublock-origin/" target="_blank"></a><br>Ads can be annoying, we know. So why keep them? With these extensions for any modern-day browsers, you can remove advertisements! This can help increase your work flow, productivity speed, and also just make your webpages look simple!</p>        
-    </div>
+    <script id="rendered-js">
+var animateButton = function (e) {
+  e.preventDefault;
+  e.target.classList.remove('animate');
+  e.target.classList.add('animate');
+  setTimeout(function () {
+    e.target.classList.remove('animate');
+  }, 700);
+};
 
-    <br>
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+for (var i = 0; i < bubblyButtons.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+  bubblyButtons[i].addEventListener('click', animateButton, false);
+}window.CP.exitedLoop(0);
 
-    <button class="toggle6">Text Hosting</button>
-    <div class="list6">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://www.toptal.com/developers/hastebin/" target="_blank">Hastebin</a>, <a href="https://ghostbin.com/" target="_blank">Ghostbin</a>, <a href="https://stedit.app/" target="_blank">STEdit (editor)</a><br>Want to take notes in a quick rush? Or do you have a long text message you want to send to friends? No worries! We got you covered! Using one of these powerful programs can help you with that! Simply upload any string of text into one of the websites above to host/edit it!</p>        
-    </div>
+    </script>
 
-    <br>
+  
 
-    <button class="toggle7">File Hosting</button>
-    <div class="list7">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://anonfiles.com" target="_blank">AnonFiles</a>, <a href="http://files.htp.sh" target="_blank">HackThePlanet</a>, <a href="https://ufile.io/" target="_blank">ufile</a><br>Need to share a video online? Finished a project that you want to share among your team? These websites can host any file! Simply upload any file into one of the websites above to host it online!</p>        
-    </div>
 
-<br>
 
-    <button class="toggle8">Become Anonymous</button>
-    <div class="list8">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://www.torproject.org/download/" target="_blank">TOR</a>, <a href="https://www.security.org/vpn/best/" target="_blank">VPNs</a>, <a href="https://geonode.com/free-proxy-list/" target="_blank">GeoNode</a>, <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>, <a href="https://www.fakenamegenerator.com/" target="_blank">NameGenerator</a>, <a href="https://www.privacytools.io/" target="_blank">PrivacyTools</a><br>Your personal information is somewhere out there on the internet. Our team has gathered some of the best toold around too help you remain safe and protected, without sensitive data being spread around!</p>        
-    </div>
-
-    <br>
-
-    <button class="toggle9">Temporary Emails</button>
-    <div class="list9">
-      <p class="list-item" style="--delay:0s"></p>
-      <p class="list-item" style="--delay:0.15s"><a href="https://yopmail.com/en/" target="_blank">YopMail</a>, <a href="https://temp-mail.org/en/" target="_blank">Temp-Mail</a>, <a href="https://mailpoof.com/" target="_blank">Mailproof</a><br>Wether you want to keep your data as safe as possible, or you're signing up for a website that you're not sure you will ever use again, these tools can help you out! They can generate a disposable email address for you to use short-term!</p>     
-    </div>
-
-    <br>
-
-    <h2 style="padding-top: 120px; padding-bottom: 10px;">
-            <strong style="font-size:1.5em">Interested in hardware?</strong>
-          </h2>
-
-              <iframe class="youtubevideo" width="75%" height="40%" src="https://www.youtube.com/embed/6sXvuxmjuks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-            </div>
+<script>const btn = document
+    .querySelector('.bubbly-button');
+const text = document
+    .querySelector('.card__read-more');
+const cardHolder = document
+    .querySelector('.card-holder');
+cardHolder
+    .addEventListener('click', e => {
+        const current = e.target;
+        const isReadMoreBtn = current.className.includes('bubbly-button');
+        if (!isReadMoreBtn)
+            return;
+        const currentText = e.target.parentNode.querySelector('.card__read-more');
+        currentText.classList.toggle('card__read-more--open');
+    });</script>
 <br><br>
     </div>
-    <div id="contact" class="text-center">
-      <div style="padding-top:10px;background-color: #1D1D1D; border-color: white; border-radius: 5px; border-style: solid; border-width: 3px;" class="container">
+    <div id="contact" class="container text-center">
+    <div style="background-color: #1D1D1D; border-color: grey; border-radius: 30px; border-style: solid; border-width: 3px;" class="container">
         <div class="section-title center">
-          <h2><strong style="font-size:1.65em">Subscribe</strong></h2>
-          <div class="line"></div>
+            <h2>Subscribe</h2>
+            <div class="line">
+
+            </div>
         </div>
         <div class="address">Receive all our news and updates</div>
         <div style="font-style: italic; font-size:0.5em; padding-top: 15px">Fields marked with an asterisk (*) are required</div>
@@ -1770,30 +1296,31 @@ padding-bottom: 80px;
             <input name="email" type="text" id="email" placeholder="Email *" required>
             <input name="email" type="text" id="email" placeholder="Address (optional)">
             <input type="submit" class="send_message transition" id="submit" value="Subscribe Now!">
-          </form>
+            </form>
         </div>
-      </div>
+
+
     </div>
+
+
+</div>
   </div></div>
+</body>
+</div>
 <footer style="margin-top: 80px" id="footer">
     <div class="footer-top">
         <div class="container text-center">
             <div class="footer-logo">
-                <a style="font-size:200%; flex-wrap: nowrap;">OpenEyes - 2023 FBLA Regionals</a>
+                <a style="font-size:200%; flex-wrap: nowrap;">OpenEyes - 2023 FBLA State</a>
             </div>
             
         </div>
     </div>
     <div class="footer-bottom">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <p class="footertext">© 2023 Jagger</p>
+                <div>
+                    <p class="footerbottom" style="text-align: center; position: relative; bottom: 20px">Developed by <a style="color: aqua">Jagger</a> and <a style="color: aqua" >Kenneth</a></p>
                 </div>
-                <div class="col-sm-6">
-                    <p class="pull-right footertext">Developed by <a class="footertext" href="https://www.instagram.com/zvrcx">Jagger</a> and <a class="footertext" href="https://www.instagram.com/dreamwastee">Marci</a></p>
-                </div>
-            </div>
         </div>
     </div>
 </footer>
