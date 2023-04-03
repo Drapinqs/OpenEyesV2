@@ -35,11 +35,18 @@
         font-family: 'Jost';
         
       }
-
+@media (min-width: 768px){}
+.container {
+    width: auto;
+}
       @media only screen and (max-width:767px) {
         .container {
           padding: 20px;
         }
+       html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
         .footerbottom {
   font-size: 20px;
 }
@@ -47,20 +54,14 @@
   font-size: 17px !important;
 }
 
-.toggle:focus ~ .list {
-  height: 27% !important;
-  width: 80% !important;
-  left: 12% !important;
+.bubbly-button {
+  transform: scale(0.6);
 }
-.toggle2:focus ~ .list2 {
-  height: 35% !important;
-  width: 80% !important;
-  left: 12% !important;
-}
-.toggle3:focus ~ .list3 {
-  height: 40% !important;
-  width: 80% !important;
-  left: 12% !important;
+.card-contents span {
+  width: 500;
+  position: relative;
+  right: 160;
+  top: -100;
 }
 
         .main-text {
@@ -81,7 +82,11 @@
         }
 
         .footer-logo {
-          font-size: 0.5em;
+          font-size: 0.45em;
+          flex-wrap: nowrap;
+        }
+.footerbottom a {
+          font-size: 1em;
           flex-wrap: nowrap;
         }
 
@@ -996,8 +1001,13 @@ html {
 
       .section-title.center .line{
     background-color: aqua;
-    height: 4px;
-    width: 120px;
+    width: 60%;
+  border: double 4px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, aqua,#8ae6ff,aqua);
+  background-origin: border-box;
+  box-shadow: 0px 0px 15px aqua;
+  background-clip: padding-box, border-box;
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
@@ -1405,30 +1415,6 @@ padding-bottom: 80px;
 }
 
 
-
-.card__read-more{
-  display: block;
-  opacity: 0;
-  max-height: 0;
-  width: 80rem;
-  position: relative;
-right:170%;
-  top:10px;
-  background-color: #131313;
-  border-radius: 15px;
-  transition: all 0.8s;
-  z-index: -1;
-}
-
-.card__read-more--open{
-  padding: 1em 2em;
-  z-index: 1;
-  display: block;
-  opacity: 1;
-  max-height: 100rem;
-  box-shadow: 0px 0px 5px aqua;
-  border: 1px solid aqua;
-}
     </style>
   </head>
   <body>
@@ -1525,11 +1511,11 @@ right:170%;
         <div id="contact-form">
           <div id="message"></div>
           <form method="post" action="" name="contactform" id="contactform">
-            <input name="email" type="text" style="width: 48%; position: relative; left:-10px;" id="email" placeholder="First Name *" required>
-            <input name="email" type="text" style="width: 48%; position: relative; left:10px;" id="email" placeholder="Last Name *" required>
+            <input name="email" type="text" style="width: 49%; position: relative; left:-4px;" id="email" placeholder="First Name *" required>
+            <input name="email" type="text" style="width: 49%; position: relative; left:4px;" id="email" placeholder="Last Name *" required>
             <input name="email" type="text" id="email" placeholder="Email *" required>
-            <input name="email" type="text" id="email" placeholder="Message *" required>
-            <input type="submit" class="send_message transition" id="submit" value="Send Message">
+            <input name="email" type="text" id="email" placeholder="Address (optional)">
+            <input type="submit" class="send_message transition" id="submit" value="Subscribe Now!">
             </form>
         </div>
 
