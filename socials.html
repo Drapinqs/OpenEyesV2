@@ -25,44 +25,60 @@
           url('files/fonts/jost-v12-latin-regular.ttf') format('truetype'),
           url('files/fonts/jost-v12-latin-regular.svg#Jost') format('svg');
       }
-.learn {
-    color: #99ffff;
-}
+
+      .learn {
+        color: #99ffff;
+      }
+
       * {
         padding: 0;
         margin: 0;
         font-size: 30px;
         font-family: 'Jost';
-        
       }
-@media (min-width: 768px){}
-.container {
-    width: auto;
-}
+
+      @media (min-width: 768px) {}
+
+      .container {
+        width: auto;
+      }
+
       @media only screen and (max-width:767px) {
         .container {
           padding: 20px;
         }
-       html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-        .footerbottom {
-  font-size: 20px;
-}
-.list-item {
-  font-size: 17px !important;
-}
 
-.bubbly-button {
-  transform: scale(0.6);
-}
-.card-contents span {
-  width: 500;
-  position: relative;
-  right: 160;
-  top: -100;
-}
+        html,
+        body {
+          max-width: 100%;
+          overflow-x: hidden;
+        }
+
+        .firstname,
+        .lastname {
+          width: 100% !important;
+          position: relative !important;
+          left: 0 !important;
+        }
+
+        .footerbottom {
+          font-size: 20px;
+        }
+
+        .list-item {
+          font-size: 17px !important;
+        }
+
+        .bubbly-button {
+          transform: scale(0.7);
+        }
+
+        .card-contents span {
+          width: 500;
+          position: relative;
+          right: 160;
+          top: -100;
+        }
 
         .main-text {
           position: relative;
@@ -70,7 +86,6 @@
           right: 40px;
           top: -35px;
           letter-spacing: 5;
-
         }
 
         .main-text:hover {
@@ -85,7 +100,8 @@
           font-size: 0.45em;
           flex-wrap: nowrap;
         }
-.footerbottom a {
+
+        .footerbottom a {
           font-size: 1em;
           flex-wrap: nowrap;
         }
@@ -110,12 +126,12 @@
         width: 0;
         background: transparent;
       }
-html {
-    scroll-behavior: smooth !important;
 
-}
+      html {
+        scroll-behavior: smooth !important;
+      }
+
       body {
-
         color: white;
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(30, 30, 30, 1) 100%);
@@ -166,7 +182,7 @@ html {
         text-align: center;
       }
 
-      ul li{
+      ul li {
         position: relative;
         bottom: 20px;
         display: inline-block;
@@ -801,7 +817,7 @@ html {
 
       .blockquote {
         justify-content: center;
-        position: relative; 
+        position: relative;
         left: 15%;
         width: 70%;
         font-size: 17.5px;
@@ -999,422 +1015,447 @@ html {
         font-weight: 300;
       }
 
-      .section-title.center .line{
-    background-color: aqua;
-    width: 60%;
-  border: double 4px transparent;
-  border-radius: 80px;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, aqua,#8ae6ff,aqua);
-  background-origin: border-box;
-  box-shadow: 0px 0px 15px aqua;
-  background-clip: padding-box, border-box;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 20px;
-}
+      .section-title.center .line {
+        background-color: aqua;
+        width: 60%;
+        border: double 4px transparent;
+        border-radius: 80px;
+        background-image: linear-gradient(white, white), radial-gradient(circle at top left, aqua, #8ae6ff, aqua);
+        background-origin: border-box;
+        box-shadow: 0px 0px 15px aqua;
+        background-clip: padding-box, border-box;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+
       .containerdd {
-  justify-content: center;
-position: relative;
-padding-bottom: 80px;
-}
+        justify-content: center;
+        position: relative;
+        padding-bottom: 80px;
+      }
 
-.toggle {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
+      .toggle {
+        all: unset;
+        background-color: #191919;
+        border-color: aqua;
+        border-width: 2px;
+        box-shadow: 0px 0px 5px aqua;
+        border-style: solid;
+        color: white;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 25%;
+        width: 50%;
+        padding: 10px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-.toggle::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
+      .toggle::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-width: 0 3px 3px 0;
+        border-style: solid;
+        transform: rotate(-45deg);
+        transition: 0.5s;
+      }
 
-.list {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:22%;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-  transition: all 0.7s !important;
-  padding-left: 14px !important;
-  padding-right: 14px !important;
-}
+      .list {
+        background-color: #191919;
+        color: #FFF;
+        display: grid;
+        position: relative;
+        grid-template-rows: repeat(7, 30px);
+        border-radius: 5px;
+        overflow: hidden;
+        left: 22%;
+        width: 60%;
+        height: 0;
+        transition: 0.9s;
+        cursor: normal;
+      }
 
-.toggle:focus::after {
-  transform: rotate(225deg);
-}
+      .list-item {
+        font-size: 0.7em;
+        color: white;
+        align-items: center;
+        user-select: none;
+        position: relative;
+        left: 50%;
+        cursor: normal;
+        opacity: 0;
+        transition: all 0.7s !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+      }
 
-.toggle:focus ~ .list {
-  height: 30%;
-}
+      .toggle:focus::after {
+        transform: rotate(225deg);
+      }
 
-.toggle:focus ~ .list .list-item {
-  opacity: 100;
-}
+      .toggle:focus~.list {
+        height: 30%;
+      }
 
-.toggle2 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
+      .toggle:focus~.list .list-item {
+        opacity: 100;
+      }
 
-.toggle2::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
+      .toggle2 {
+        all: unset;
+        background-color: #191919;
+        border-color: aqua;
+        border-width: 2px;
+        box-shadow: 0px 0px 5px aqua;
+        border-style: solid;
+        color: white;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 25%;
+        width: 50%;
+        padding: 10px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-.list2 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:22%;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 50%;
-  cursor: normal;
-  opacity: 0;
-}
+      .toggle2::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-width: 0 3px 3px 0;
+        border-style: solid;
+        transform: rotate(-45deg);
+        transition: 0.5s;
+      }
 
-.toggle2:focus::after {
-  transform: rotate(225deg);
-}
+      .list2 {
+        background-color: #191919;
+        color: #FFF;
+        display: grid;
+        position: relative;
+        grid-template-rows: repeat(7, 30px);
+        border-radius: 5px;
+        overflow: hidden;
+        left: 22%;
+        width: 60%;
+        height: 0;
+        transition: 0.9s;
+        cursor: normal;
+      }
 
-.toggle2:focus ~ .list2 {
-  height: 35%;
-}
+      .list-item {
+        font-size: 0.7em;
+        color: white;
+        align-items: center;
+        user-select: none;
+        position: relative;
+        left: 50%;
+        cursor: normal;
+        opacity: 0;
+      }
 
-.toggle2:focus ~ .list2 .list-item {
-  opacity: 100;
-}
+      .toggle2:focus::after {
+        transform: rotate(225deg);
+      }
 
-.toggle3 {
-  all: unset;
-  background-color: #191919;
-  border-color: aqua;
-  border-width: 2px;
-  box-shadow: 0px 0px 5px aqua;
-  border-style: solid;
-  color: white;
-  flex-wrap: nowrap;
-  position: relative;
-  left:25%;
-  width: 50%;
-  padding: 10px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
+      .toggle2:focus~.list2 {
+        height: 35%;
+      }
 
-.toggle3::after {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
+      .toggle2:focus~.list2 .list-item {
+        opacity: 100;
+      }
 
-.list3 {
-  background-color: #191919;
-  color: #FFF;
-  display: grid;
-  position: relative;
-  grid-template-rows: repeat(7, 30px);
-  border-radius: 5px;
-  overflow: hidden;
-  left:22%;
-  width: 60%;
-  height: 0;
-  transition: 0.9s;
-  cursor: normal;
-}
-.list-item {
-  font-size: 0.7em;
-  color: white;
-  align-items: center;
-  user-select: none;
-  position: relative;
-  left: 0% !important;
-  cursor: normal;
-  opacity: 0;
-}
+      .toggle3 {
+        all: unset;
+        background-color: #191919;
+        border-color: aqua;
+        border-width: 2px;
+        box-shadow: 0px 0px 5px aqua;
+        border-style: solid;
+        color: white;
+        flex-wrap: nowrap;
+        position: relative;
+        left: 25%;
+        width: 50%;
+        padding: 10px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
 
-.toggle3:focus::after {
-  transform: rotate(225deg);
-}
+      .toggle3::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-width: 0 3px 3px 0;
+        border-style: solid;
+        transform: rotate(-45deg);
+        transition: 0.5s;
+      }
 
-.toggle3:focus ~ .list3 {
-  height: 42%;
-}
+      .list3 {
+        background-color: #191919;
+        color: #FFF;
+        display: grid;
+        position: relative;
+        grid-template-rows: repeat(7, 30px);
+        border-radius: 5px;
+        overflow: hidden;
+        left: 22%;
+        width: 60%;
+        height: 0;
+        transition: 0.9s;
+        cursor: normal;
+      }
 
-.toggle3:focus ~ .list3 .list-item {
-  opacity: 100;
-}
+      .list-item {
+        font-size: 0.7em;
+        color: white;
+        align-items: center;
+        user-select: none;
+        position: relative;
+        left: 0% !important;
+        cursor: normal;
+        opacity: 0;
+      }
 
-.bgcontact {
-  background-color: #191919;
-  border-radius: 30px;
-}
-.bgphone {
-  background-color: #303030;
-  border: aqua 2px solid;
-  box-shadow: 0px 0px 10px aqua;
-  max-width:50%;
-  max-height: 25%;
-  transform: translate(50%, 30%);
-  border-radius: 30px;
-  transition: 0.1s all;
-}
-.bgphone:hover {
-  box-shadow: 0px 0px 15px aqua;
-}
-.phone {
-  transform: scale(0.3);
-  position: relative !important;
-  bottom: 155px;
-  right: 150px;
-}
-.phonetxt {
-  position: relative !important;
-  bottom: 370px;
-  left: 250px;
-}
+      .toggle3:focus::after {
+        transform: rotate(225deg);
+      }
 
-.bginsta {
-  border: aqua 2px solid;
-  box-shadow: 0px 0px 10px aqua;
-  background-color: #303030;
-  max-width:50%;
-  max-height: 25%;
-  transform: translate(50%, 50%);
-  border-radius: 30px;
-  transition: 0.1s all;
-}
-.bginsta:hover {
-  box-shadow: 0px 0px 15px aqua;
-}
-.insta {
-  transform: scale(0.3);
-  position: relative !important;
-  bottom: 155px;
-  right: 150px;
-}
-.instatxt {
-  position: relative !important;
-  bottom: 380px;
-  left: 250px;
-}
+      .toggle3:focus~.list3 {
+        height: 42%;
+      }
 
-.bgaddy {
-  border: aqua 2px solid;
-  box-shadow: 0px 0px 10px aqua;
-  background-color: #303030;
-  max-width:50%;
-  max-height: 25%;
-  transform: translate(50%, 70%);
-  border-radius: 30px;
-  transition: 0.1s all;
-}
-.bgaddy:hover {
-  box-shadow: 0px 0px 15px aqua;
-}
-.addy {
-  transform: scale(0.1);
-  position: relative !important;
-  bottom: 355px;
-  right: 350px;
-}
-.addytxt {
-  position: relative !important;
-  bottom: 780px;
-  left: 250px;
-}
+      .toggle3:focus~.list3 .list-item {
+        opacity: 100;
+      }
 
-.socials {
-  color: #99ffff;
-}
-.bubbly-button {
-  width: 220%;
-  font-family: "Helvetica", "Arial", sans-serif;
-  display: inline-block;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin: 0.5em auto;
-  margin-bottom: ;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #131313;
-  color: #fff;
-  border-radius: 15px;
-  border: solid 2px aqua;
-  cursor: pointer;
-  position: relative;
-  right:60%;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(0, 255, 255, 0.5);
-}
-.bubbly-button:focus {
-  outline: 0;
-}
-.bubbly-button:before, .bubbly-button:after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  z-index: -1000;
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-}
-.bubbly-button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 20%, #00FFFF 20%, transparent 30%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-}
-.bubbly-button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-}
-.bubbly-button:active {
-  transform: scale(0.9);
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-}
-.bubbly-button.animate:before {
-  display: block;
-  animation: topBubbles ease-in-out 1s forwards;
-}
-.bubbly-button.animate:after {
-  display: block;
-  animation: bottomBubbles ease-in-out 1s forwards;
-}
+      .bgcontact {
+        background-color: #191919;
+        border-radius: 30px;
+      }
 
-@keyframes topBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-@keyframes bottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
+      .bgphone {
+        background-color: #303030;
+        border: aqua 2px solid;
+        box-shadow: 0px 0px 10px aqua;
+        max-width: 50%;
+        max-height: 25%;
+        transform: translate(50%, 30%);
+        border-radius: 30px;
+        transition: 0.1s all;
+      }
 
+      .bgphone:hover {
+        box-shadow: 0px 0px 15px aqua;
+      }
 
-.card{
-  width: 20rem;
-  color: #fff;
-  margin: 2rem auto;
-  border-radius: 15px;
-}
+      .phone {
+        transform: scale(0.3);
+        position: relative !important;
+        bottom: 155px;
+        right: 150px;
+      }
 
-.card__name{
-  font-size: 1.7em;
-}
+      .phonetxt {
+        position: relative !important;
+        bottom: 370px;
+        left: 250px;
+      }
 
-.card__img{
-  width: 100%;
-  height: 12rem;
-  object-fit: cover;
-}
+      .bginsta {
+        border: aqua 2px solid;
+        box-shadow: 0px 0px 10px aqua;
+        background-color: #303030;
+        max-width: 50%;
+        max-height: 25%;
+        transform: translate(50%, 50%);
+        border-radius: 30px;
+        transition: 0.1s all;
+      }
 
-.card-contents{
-  padding: 1rem;
-  width: 100%;
-}
+      .bginsta:hover {
+        box-shadow: 0px 0px 15px aqua;
+      }
 
+      .insta {
+        transform: scale(0.3);
+        position: relative !important;
+        bottom: 155px;
+        right: 150px;
+      }
 
+      .instatxt {
+        position: relative !important;
+        bottom: 380px;
+        left: 250px;
+      }
+
+      .bgaddy {
+        border: aqua 2px solid;
+        box-shadow: 0px 0px 10px aqua;
+        background-color: #303030;
+        max-width: 50%;
+        max-height: 25%;
+        transform: translate(50%, 70%);
+        border-radius: 30px;
+        transition: 0.1s all;
+      }
+
+      .bgaddy:hover {
+        box-shadow: 0px 0px 15px aqua;
+      }
+
+      .addy {
+        transform: scale(0.1);
+        position: relative !important;
+        bottom: 355px;
+        right: 350px;
+      }
+
+      .addytxt {
+        position: relative !important;
+        bottom: 780px;
+        left: 250px;
+      }
+
+      .socials {
+        color: #99ffff;
+      }
+
+      .bubbly-button {
+        width: 220%;
+        font-family: "Helvetica", "Arial", sans-serif;
+        display: inline-block;
+        font-size: 1em;
+        padding: 1em 2em;
+        margin: 0.5em auto;
+        margin-bottom: ;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #131313;
+        color: #fff;
+        border-radius: 15px;
+        border: solid 2px aqua;
+        cursor: pointer;
+        position: relative;
+        right: 60%;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        box-shadow: 0 2px 25px rgba(0, 255, 255, 0.5);
+      }
+
+      .bubbly-button:focus {
+        outline: 0;
+      }
+
+      .bubbly-button:before,
+      .bubbly-button:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+      }
+
+      .bubbly-button:before {
+        display: none;
+        top: -75%;
+        background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 20%, #00FFFF 20%, transparent 30%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+      }
+
+      .bubbly-button:after {
+        display: none;
+        bottom: -75%;
+        background-image: radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, transparent 10%, #00FFFF 15%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%), radial-gradient(circle, #00FFFF 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+      }
+
+      .bubbly-button:active {
+        transform: scale(0.9);
+        box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+      }
+
+      .bubbly-button.animate:before {
+        display: block;
+        animation: topBubbles ease-in-out 1s forwards;
+      }
+
+      .bubbly-button.animate:after {
+        display: block;
+        animation: bottomBubbles ease-in-out 1s forwards;
+      }
+
+      @keyframes topBubbles {
+        0% {
+          background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+        }
+
+        50% {
+          background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+        }
+
+        100% {
+          background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+          background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+      }
+
+      @keyframes bottomBubbles {
+        0% {
+          background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+        }
+
+        50% {
+          background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+        }
+
+        100% {
+          background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+          background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        }
+      }
+
+      .card {
+        width: 20rem;
+        color: #fff;
+        margin: 2rem auto;
+        border-radius: 15px;
+      }
+
+      .card__name {
+        font-size: 1.7em;
+      }
+
+      .card__img {
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+      }
+
+      .card-contents {
+        padding: 1rem;
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -1450,7 +1491,6 @@ padding-bottom: 80px;
       </div>
       <img style="top: 147px; left: 1px; position: absolute; width: 100%; height: 0.1em;" src="files/images/rgb.gif">
     </nav>
-    
     <div id="about">
       <div class="container">
         <div class="section-title center text-center">
@@ -1462,86 +1502,75 @@ padding-bottom: 80px;
         <div class="row">
           <div class="text-center">
             <p class="blockquote">We're happy to help!
-            
             <p>Open from Monday-Friday: 7AM-5PM</p>
-          </p>
+            </p>
           </div>
         </div>
-
         <div class="bgcontact">
           <div style="position: relative; top: 10px;" class="card">
-      <div class="card-contents">
-        <button class="bubbly-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="transform: scale(2.5);" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16"> <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/> </svg>&nbsp;&nbsp;&nbsp;&nbsp;623-999-9999</button>
-          
-        
-      </div>
-    <div style="position: relative; bottom: 10px;" class="card">
-      <div class="card-contents">
-        <button class="bubbly-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="transform: scale(2.5);" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/> </svg>&nbsp;&nbsp;&nbsp;&nbsp;@OpenEyes</button>
-          
-        
-      </div>
-    </div>
-        <div style="position: relative; bottom: 20px;" class="card">
-      <div class="card-contents">
-        <button class="bubbly-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="transform: scale(2.5);" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16"> <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/> </svg>&nbsp;&nbsp;&nbsp;&nbsp;123 S Rose LN</button>
-          
-        
-      </div>
-    </div>
-          
-    
+            <div class="card-contents">
+              <button class="bubbly-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="transform: scale(2.5);" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg>&nbsp;&nbsp;&nbsp;&nbsp;623-999-9999 </button>
+            </div>
+            <div style="position: relative; bottom: 10px;" class="card">
+              <div class="card-contents">
+                <button class="bubbly-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="transform: scale(2.5);" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                  </svg>&nbsp;&nbsp;&nbsp;&nbsp;@OpenEyes </button>
+              </div>
+            </div>
+            <div style="position: relative; bottom: 20px;" class="card">
+              <div class="card-contents">
+                <button class="bubbly-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="transform: scale(2.5);" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                  </svg>&nbsp;&nbsp;&nbsp;&nbsp;123 S Rose LN </button>
+              </div>
+            </div>
+          </div>
         </div>
-        
       </div>
-        </div>
-
-
-
-<div id="contact" class="container text-center">
-    <div style="background-color: #1D1D1D; border-color: grey; border-radius: 30px; border-style: solid; border-width: 3px;" class="container">
-        <div class="section-title center">
+      <div id="contact" class="container text-center">
+        <div style="background-color: #1D1D1D; border-color: grey; border-radius: 30px; border-style: solid; border-width: 3px;" class="container">
+          <div class="section-title center">
             <h2>Get in touch</h2>
-            <div class="line">
-
-            </div>
-        </div>
-        <div class="address">Send us a message and we will reach out to you as quickly as possible!</div>
-        <div style="font-style: italic; font-size:0.5em; padding-top: 15px">Fields marked with an asterisk (*) are required</div>
-        <div id="contact-form">
-          <div id="message"></div>
-          <form method="post" action="" name="contactform" id="contactform">
-            <input name="email" type="text" style="width: 49%; position: relative; left:-4px;" id="email" placeholder="First Name *" required>
-            <input name="email" type="text" style="width: 49%; position: relative; left:4px;" id="email" placeholder="Last Name *" required>
-            <input name="email" type="text" id="email" placeholder="Email *" required>
-            <input name="email" type="text" id="email" placeholder="Address (optional)">
-            <input type="submit" class="send_message transition" id="submit" value="Subscribe Now!">
+            <div class="line"></div>
+          </div>
+          <div class="address">Send us a message and we will reach out to you as quickly as possible!</div>
+          <div style="font-style: italic; font-size:0.5em; padding-top: 15px">Fields marked with an asterisk (*) are required</div>
+          <div id="contact-form">
+            <div id="message"></div>
+            <form method="post" action="" name="contactform" id="contactform">
+              <input name="email" class="firstname" type="text" style="width: 49%; position: relative; left:-4px;" placeholder="Name or Business *" required>
+              <input name="email" type="text" id="email" placeholder="Email *" required>
+              <input name="email" type="text" id="email" placeholder="Reasoning *" require>
+              <input type="submit" class="send_message transition" id="submit" value="Subscribe Now!">
             </form>
+          </div>
         </div>
-
-
-    </div>
-
-
-</div>
+      </div>
   </body>
-</div>
-<footer style="margin-top: 80px" id="footer">
+  </div>
+  <footer style="margin-top: 80px" id="footer">
     <div class="footer-top">
-        <div class="container text-center">
-            <div class="footer-logo">
-                <a style="font-size:200%; flex-wrap: nowrap;">OpenEyes - 2023 FBLA State</a>
-            </div>
-            
+      <div class="container text-center">
+        <div class="footer-logo">
+          <a style="font-size:200%; flex-wrap: nowrap;">OpenEyes - 2023 FBLA State</a>
         </div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <div class="container">
-                <div>
-                    <p class="footerbottom" style="text-align: center; position: relative; bottom: 20px">Developed by <a style="color: aqua">Jagger</a> and <a style="color: aqua" >Kenneth</a></p>
-                </div>
+      <div class="container">
+        <div>
+          <br>
+          <p class="footerbottom" style="text-align: center; position: relative; bottom: 20px">Developed by <a style="color: aqua">Jagger</a> and <a style="color: aqua">Kenneth</a>
+          </p>
         </div>
+      </div>
     </div>
-</footer>
+  </footer>
   </body>
 </html>
